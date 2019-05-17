@@ -21,7 +21,11 @@
 		<div class="col-sm-9 col-md-10  main">
 		 	<h3>송장 처리 상세화면</h3>
 			<hr>
+<<<<<<< HEAD
 		 		<div class="col-md-6 col-md-offset-3">		 		
+=======
+		 		<div class="col-xs-11">		 		
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 	  				<c:set var="iDetailList" value="${requestScope.invoiceDetailList}"/>
 		  				<c:forEach var="i" items="${iDetailList}">
 		  				<c:if test="${i.iId == requestScope.iId }">
@@ -31,7 +35,11 @@
 							    <h3 class="panel-title"><strong>&emsp;&emsp;송장id</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&thinsp;<strong>${i.iId}</strong></h3>
 							  </div>
 							  <div class="panel-body">
+<<<<<<< HEAD
 								  <div class="col-md-11">
+=======
+								  <div class="col-md-6 col-md-offset-3">
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 									  <table class="table table-borderless">
 									  	<tr>
 									  		<th>수신인 성함</th>

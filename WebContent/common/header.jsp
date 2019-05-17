@@ -13,7 +13,11 @@
           <span class="icon-bar"></span>
         </button>
       	<img src="${pageContext.request.contextPath}/Resources/img/trillionlogowhite.png"
+<<<<<<< HEAD
       	 onclick="javascript:location.href='${pageContext.request.contextPath}/view/index.jsp'">
+=======
+      	 onclick="javascript:location.href='${pageContext.request.contextPath}/view/index.jsp'">&nbsp;&nbsp;&nbsp;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
       </div>
       
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +29,11 @@
       	  <li>&nbsp;&nbsp;</li>
 	        <c:if test="${id == null}">
 	        <li>
+<<<<<<< HEAD
 	        	<form action="/FulfillmentService/LoginProc?action=loginView" method="post">&nbsp;&nbsp;&nbsp;
+=======
+	        	<form action="/FulfillmentService/LoginProc?action=loginView" method="post">
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 	        	<button type="submit" class="btn" style="color:#337AB7; background:white;">로그인</button>
 	        	</form>
 	        </li>

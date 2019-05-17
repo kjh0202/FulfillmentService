@@ -37,12 +37,21 @@ public class ProductProc extends HttpServlet {
 	protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		ProductDAO pDao = null;
+<<<<<<< HEAD
+=======
+		ProductDTO pDto = null;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 		List<ProductDTO> pList = null, pListBook = null, pListAnimalGoods = null, pListCosmetic = null, pListFruit = null, pListHomeAppliances = null;
 		List<ProductDTO> pListItemDetail = null;
 		List<EventDTO> eListId = null, eListAmount = null;
 		HttpSession session = request.getSession();
 		RequestDispatcher rd = null;
+<<<<<<< HEAD
 		int pId = 0, orderAmount = 0, alertCount = 0;
+=======
+		String imgName = "", eventName = "";
+		int pId = 0, orderAmount = 0;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 		String action = request.getParameter("action");
 		
 		switch(action) {
@@ -55,8 +64,11 @@ public class ProductProc extends HttpServlet {
 			pListCosmetic = pDao.selectAllCosmetic();
 			pListFruit = pDao.selectAllFruit();
 			pListHomeAppliances = pDao.selectAllHomeAppliances();
+<<<<<<< HEAD
 			alertCount = pDao.selectProductCount();
 			session.setAttribute("alertCount", alertCount);
+=======
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 			
 			request.setAttribute("pListBook", pListBook);
 			request.setAttribute("pListAnimalGoods", pListAnimalGoods);
@@ -93,8 +105,12 @@ public class ProductProc extends HttpServlet {
 			pList = pDao.selectAllItems();
 			eListId = pDao.selectEventpId();
 			eListAmount = pDao.selectEventpAmount();
+<<<<<<< HEAD
 			alertCount = pDao.selectProductCount();
 			session.setAttribute("alertCount", alertCount);
+=======
+			
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 			request.setAttribute("pList", pList);
 			request.setAttribute("eListId", eListId);
 			request.setAttribute("eListAmount", eListAmount);

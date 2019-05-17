@@ -26,7 +26,11 @@
 				    <input type="file" name="file" value="" size="10" class="btn btn-info"/><br>
 				    <input type="submit" value="파일 업로드" name="submit" class="btn btn-info" />
 				</form>
+<<<<<<< HEAD
 				<br><p style="color:red">업로드하는 파일은 반드시 D:\csv 경로 아래 위치해야 합니다.</p>
+=======
+				<br><p style="color:red">업로드하는 파일은 D:\csv 경로 아래 위치해야 합니다.</p>
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 				
 				<br>
 				<form name="from1" action="/FulfillmentService/CalculateCostProc?action=invoiceUpdate" method="POST">

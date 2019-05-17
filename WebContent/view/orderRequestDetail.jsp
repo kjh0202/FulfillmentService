@@ -57,7 +57,11 @@
 								<br><br>
 								<form name="form1" action="/FulfillmentService/ProductProc?action=requestItemsToOrder&pId=${p.pId}" method="POST" align="center">
 									발주 요청 개수를 입력하세요:&nbsp;
+<<<<<<< HEAD
 									<input type="text" name="orderAmount" autocomplete="off" /><br><br><br>
+=======
+									<input type="text" name="orderAmount" /><br><br><br>
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 				   					<input type="submit" value="발주하기" name="submit" class="btn btn-info" />
 								</form>
 								<br>							    

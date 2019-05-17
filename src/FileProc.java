@@ -1,6 +1,12 @@
 
 
 import java.io.IOException;
+<<<<<<< HEAD
+=======
+import java.io.InputStream;
+import java.net.URI;
+import java.nio.file.Path;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -11,6 +17,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< HEAD
+=======
+import javax.servlet.http.HttpSession;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 import javax.servlet.http.Part;
 
 import org.slf4j.Logger;
@@ -36,11 +46,19 @@ public class FileProc extends HttpServlet {
 	
 	protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+<<<<<<< HEAD
+=======
+		HttpSession session = request.getSession();
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 		RequestDispatcher rd = null;
 		String fileName = "";
 		Part filePart = null;
 		InvoiceDAO iDao = null;
 		List<InvoiceDTO> invoiceList = null;
+<<<<<<< HEAD
+=======
+		List<InvoiceDTO> invoiceDetailList = null;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 		String action = request.getParameter("action");
 		
 		switch (action) {
@@ -58,9 +76,15 @@ public class FileProc extends HttpServlet {
 		    FileDAO fDao = new FileDAO();
 		    			
 		    fDao.insertFileIntoTable(finalPath);
+<<<<<<< HEAD
 			fDao.orderInvoiceIdSet();
 			fDao.orderInvoiceIdUpdate();
 			iDao = new InvoiceDAO();
+=======
+			
+			iDao = new InvoiceDAO();
+
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 			invoiceList = iDao.selectInvoiceAll();
 			
 			//request.setAttribute("fileName", fileName);

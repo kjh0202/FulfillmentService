@@ -1,6 +1,10 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+<<<<<<< HEAD
+=======
+import java.sql.ResultSet;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 import java.sql.SQLException;
 
 import org.slf4j.Logger;
@@ -62,6 +66,7 @@ public class FileDAO {
 		}
 	}
 	
+<<<<<<< HEAD
 	public void orderInvoiceIdSet() {
 		LOG.trace("orderInvoiceIdSet() start");
 		String sql ="set @CNT = 100000;";
@@ -104,5 +109,7 @@ public class FileDAO {
 		}
 	}
 	
+=======
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 	
 }

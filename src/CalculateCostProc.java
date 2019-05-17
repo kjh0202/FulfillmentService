@@ -3,6 +3,10 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
+import java.util.StringTokenizer;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -39,10 +43,16 @@ public class CalculateCostProc extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		CalculateCostDAO cDao = null;
 		InvoiceDAO iDao = null;
+<<<<<<< HEAD
 		ProductDAO pDao = null;
 		List<InvoiceDTO> invoiceList = null, invoiceDetailList = null;
 		List<String> pageList = new ArrayList<String>();
 		int id = 0, iId = 0, curPage= 1, alertCount = 0;
+=======
+		List<InvoiceDTO> invoiceList = null, invoiceDetailList = null;
+		List<String> pageList = new ArrayList<String>();
+		int id = 0, iId = 0, curPage= 1;
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 		String date = "", idStr = "";
 		HttpSession session = request.getSession();
 		RequestDispatcher rd = null;
@@ -75,11 +85,16 @@ public class CalculateCostProc extends HttpServlet {
 			page = "&nbsp;<a href=#>&raquo;</a>";
 			pageList.add(page);
 			
+<<<<<<< HEAD
 			pDao = new ProductDAO();
 			alertCount = pDao.selectProductCount();
 			session.setAttribute("alertCount", alertCount);
 			
 			List<CalculateCostDTO> ipList = cDao.selectShoppingPage(curPage);
+=======
+			List<CalculateCostDTO> ipList = cDao.selectShoppingPage(curPage);
+			//LOG.trace("ipList:" + ipList.toString());
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 			request.setAttribute("ipList", ipList);
 			request.setAttribute("pageList", pageList);
 			rd = request.getRequestDispatcher("view/monthlySalesHistory.jsp");
@@ -167,10 +182,13 @@ public class CalculateCostProc extends HttpServlet {
 			page = "&nbsp;<a href=#>&raquo;</a>";
 			pageList.add(page);
 
+<<<<<<< HEAD
 			pDao = new ProductDAO();
 			alertCount = pDao.selectProductCount();
 			session.setAttribute("alertCount", alertCount);
 			
+=======
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 			List<CalculateCostDTO> opList = cDao.selectOrderPage(curPage);
 			// LOG.trace("opList:" + opList.toString());
 			request.setAttribute("opList", opList);
@@ -256,10 +274,13 @@ public class CalculateCostProc extends HttpServlet {
 			}
 			page = "&nbsp;<a href=#>&raquo;</a>";
 			pageList.add(page);
+<<<<<<< HEAD
 			
 			pDao = new ProductDAO();
 			alertCount = pDao.selectProductCount();
 			session.setAttribute("alertCount", alertCount);
+=======
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 
 			List<CalculateCostDTO> tpList = cDao.selectTransitPage(curPage);
 			// LOG.trace("tpList:" + tpList.toString());
@@ -326,9 +347,12 @@ public class CalculateCostProc extends HttpServlet {
 			iDao = new InvoiceDAO();
 			invoiceList = iDao.selectInvoiceAll();
 			request.setAttribute("invoiceList", invoiceList);
+<<<<<<< HEAD
 			pDao = new ProductDAO();
 			alertCount = pDao.selectProductCount();
 			session.setAttribute("alertCount", alertCount);
+=======
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 			rd = request.getRequestDispatcher("view/invoiceProcess.jsp");
 			rd.forward(request, response);
 			LOG.trace("관리자 - 송장 처리 화면으로 넘어가기 success");
@@ -431,11 +455,14 @@ public class CalculateCostProc extends HttpServlet {
 			request.setAttribute("Nov", cDao.totalSalesChart(2019, 11));
 			request.setAttribute("Dec", cDao.totalSalesChart(2019, 12));
 			request.setAttribute("year", 2019);
+<<<<<<< HEAD
 			
 			pDao = new ProductDAO();
 			alertCount = pDao.selectProductCount();
 			session.setAttribute("alertCount", alertCount);
 			
+=======
+>>>>>>> b07872d4f42204f21a9a6f5c4e80002ffdb6b8a7
 			rd = request.getRequestDispatcher("view/totalSales.jsp");
 			rd.forward(request, response);
 
